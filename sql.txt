@@ -1,0 +1,11 @@
+
+DEVICEID:设备号码
+ROOT_PASSWORD：管理员密码
+LOCK_PASSWORD：开锁密码
+PERMISSION：是否获得了权限，获得了权限就不会发送报警信息，密码正确开锁的时候会值1，表示获得了权限，关闭锁的时候会置0，
+
+create table EntranceGuard(DEVICEID varchar(20) primary key,ROOT_PASSWORD varchar(10),LOCK_PASSWORD varchar(10),PERMISSION varchar(2),CHANNELID varchar(25)) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+drop tables EntranceGuard;
+
+insert into EntranceGuard(DEVICEID,ROOT_PASSWORD,LOCK_PASSWORD,PERMISSION,CHANNELID) values('0',"123456","123456","1","4205248368386446274");
